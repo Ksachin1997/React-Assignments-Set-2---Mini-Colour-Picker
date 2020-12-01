@@ -1,12 +1,17 @@
-import React from 'react';
+import React from "react";
+import "../styles/App.css";
+import "../styles/Child.css";
 
 const ColourSelector = (props) => {
-  const { config, selectNextBackground } = props
-  const { background } = config;
+  const { config, selectNextBackground } = props;
+  const { label, classname, background } = config;
   return (
-    <button className={/* classname should come here */} onClick={() => selectNextBackground({background: background})}>
-      {/* label should come here */}
+    <button
+      className={classname}
+      onClick={() => selectNextBackground({ background: background })}
+    >
+      {label}
     </button>
-  )
-}
+  );
+};
 export default ColourSelector;
